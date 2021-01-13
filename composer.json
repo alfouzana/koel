@@ -73,6 +73,10 @@
             "@php artisan cache:clear",
             "@php -r \"if (!file_exists('.env')) copy('.env.example', '.env');\""
         ],
+      "post-install-cmd": [
+     "php artisan clear-compiled",
+     "chmod -R 777 public/"
+ ],
         "pre-update-cmd": [
             "@php artisan clear-compiled"
         ],
